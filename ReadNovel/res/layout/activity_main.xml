@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/reader_background_brown_big_img"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.readnovel.MainActivity" >
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="#2E94FD"
+        >
+        <TextView 
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="小说阅读器"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            />
+        <Button 
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="目录"
+            android:textColor="#ffffff"
+            style="?android:attr/actionButtonStyle"
+            android:layout_alignParentRight="true"
+            android:textSize="16sp"
+            />
+    </RelativeLayout>
+    <android.support.v4.widget.DrawerLayout
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:id="@+id/drawer_layout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    >
+	    <FrameLayout 
+	        android:id="@+id/content_frame"
+	      	android:layout_width="fill_parent"
+	    	android:layout_height="fill_parent"
+	        >
+	        <ScrollView 
+	            android:id="@+id/contentSv"
+	            android:layout_width="fill_parent"
+	    		android:layout_height="fill_parent"
+	            >
+	            <TextView 
+	                android:id="@+id/tv_content"
+	                android:layout_width="fill_parent"
+	    			android:layout_height="fill_parent"
+	                />
+	        </ScrollView>
+	    </FrameLayout>
+	    <ListView 
+	        android:id="@+id/listview_left_drawer"
+	        android:layout_width = "220dp"
+	        android:layout_height="fill_parent"
+	        android:background="#ffffff"
+	        android:layout_gravity = "start"
+	        >
+	    </ListView>
+</android.support.v4.widget.DrawerLayout>
+    
+</LinearLayout>
